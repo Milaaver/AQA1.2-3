@@ -10,12 +10,12 @@ public class PostmanEchoTest {
     void shouldReturnDemoAccounts() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("some data")
-        .when()
-                .post("/post")
-        .then()
-                .statusCode(200)
-                .body("data.toString()=='some data'", is(true))
+            .body("Best book")
+       .when()
+            .post("/post")
+       .then()
+            .statusCode(200)
+            .body("data", equalTo("Best book"))
         ;
 
     }
